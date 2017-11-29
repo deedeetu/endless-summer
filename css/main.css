@@ -293,6 +293,7 @@ nav a:hover {
   width: 700px;
   height: 400px;
   margin: 0 auto;
+  float: right;
 }
 .slider {
   overflow-x: hidden;
@@ -305,7 +306,6 @@ nav a:hover {
   width: 700px;
   height: 400px;
   position: relative;
-  background-position: -100px 0;
 }
 .temp {
   position: absolute;
@@ -355,6 +355,14 @@ nav a:hover {
 }
 .slider-nav a.active {
   background: #999;
+}
+
+.floating-package {
+	width: 700px;
+	max-width: calc(100% - 40px);
+	position: relative;
+	left: -100px;
+	top: 50px;
 }
 
 /*--------------------------------------------------------------
