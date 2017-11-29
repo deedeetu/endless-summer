@@ -63,7 +63,7 @@ nav {
 nav li  {
 	display:inline-block;
 	list-style: none;
-	padding: 0 20px;
+	padding: 0 30px;
     font-family: 'Saira Extra Condensed', sans-serif;
 	text-transform: uppercase;
 	font-size: 1.25rem;
@@ -239,9 +239,9 @@ nav a:hover {
 -------------------------------------------------------------- */
 
 .slider-wrap {
-  width: 300px;
-  height: 500px;
-  margin: 20px auto;
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
 }
 .slider {
   overflow-x: hidden;
@@ -251,8 +251,8 @@ nav a:hover {
 }
 .slide {
   float: left;
-  width: 300px;
-  height: 500px;
+  width: 700px;
+  height: 400px;
   position: relative;
   background-position: -100px 0;
 }
@@ -266,19 +266,19 @@ nav a:hover {
   font-weight: 100;
 }
 #slide-0 {
-  background-image: url(http://farm8.staticflickr.com/7347/8731666710_34d07e709e_z.jpg);
+  background-image: url('../img/img-slider-1.png');
 }
 #slide-1 {
-  background-image: url(http://farm8.staticflickr.com/7384/8730654121_05bca33388_z.jpg);
+  background-image: url('../img/img-slider-2.png');
 }
 #slide-2 {
-  background-image: url(http://farm8.staticflickr.com/7382/8732044638_9337082fc6_z.jpg);
+  background-image: url('../img/img-slider-3.png');
 }
 #slide-4 {
-  background-image: url(http://farm8.staticflickr.com/7347/8731666710_34d07e709e_z.jpg);
+  background-image: url('../img/img-slider-4.png');
 }
 #slide-3 {
-  background-image: url(http://farm8.staticflickr.com/7384/8730654121_05bca33388_z.jpg);
+  background-image: url('../img/img-slider-5.png');
 }
 .slide:before {
   content: "";
@@ -319,10 +319,16 @@ nav a:hover {
 	text-align: center;
 }
 
+.center-block {
+	margin: 0 auto;
+	float: none !important;
+}
+
 /*----------5.2 - Colors----------*/
 
 .bg-blue {
 	background-color: #ebf0f6;
+	padding: 20px 40px;
 }
 
 /*----------5.3 - Alignments----------*/
