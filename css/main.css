@@ -40,9 +40,31 @@ body {
 
 /*----------1.1	- Headings----------*/
 
+h1, h2, h3, h4, h5 {
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
 /*----------1.2 - Body Copy----------*/
 
 /*----------1.3 - Button----------*/
+
+.col-1-2 .bg-blue li {
+	display: inline-block;
+}
+
+.button-top a {
+	text-transform: uppercase;
+	border-radius: 10px;
+	text-decoration: none;
+	padding: 16px 30px;
+	
+}
 
 /*----------1.4 - Lists----------*/
 
@@ -266,19 +288,19 @@ nav a:hover {
   font-weight: 100;
 }
 #slide-0 {
-  background-image: url('../img/img-slider-1.png');
+  background-image: url('../img/img-slider-1.jpg');
 }
 #slide-1 {
-  background-image: url('../img/img-slider-2.png');
+  background-image: url('../img/img-slider-2.jpg');
 }
 #slide-2 {
-  background-image: url('../img/img-slider-3.png');
+  background-image: url('../img/img-slider-3.jpg');
 }
 #slide-4 {
-  background-image: url('../img/img-slider-4.png');
+  background-image: url('../img/img-slider-4.jpg');
 }
 #slide-3 {
-  background-image: url('../img/img-slider-5.png');
+  background-image: url('../img/img-slider-5.jpg');
 }
 .slide:before {
   content: "";
@@ -326,12 +348,29 @@ nav a:hover {
 
 /*----------5.2 - Colors----------*/
 
+.bg-blue, .bg-grey {
+	padding: 50px 80px;
+}
+
 .bg-blue {
 	background-color: #ebf0f6;
-	padding: 20px 40px;
+}
+
+.bg-grey {
+	background-color: #616262;
 }
 
 /*----------5.3 - Alignments----------*/
+
+.img-holder {
+	position: relative;
+}
+
+.link {
+    position: absolute;
+    bottom: 0px; /*your button position*/
+    right: 0px; /*your button position*/
+}
 
 /*--------------------------------------------------------------
 6.0 - RESPONSIVE / MEDIA QUERIES

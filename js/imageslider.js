@@ -12,7 +12,7 @@ var slider = {
   },
   
   timing: 800,
-  slideWidth: 300, // could measure this
+  slideWidth: 700, // could measure this
  
   // In this simple example, might just move the
   // binding here to the init function
