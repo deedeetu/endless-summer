@@ -31,6 +31,13 @@
 1.0 TYPOGRAPHY:
 ----------------------------------------------------------------*/
 
+html {
+	font-size: 14px;
+}
+body {
+	font-family: 'Catamaran', sans-serif;
+}
+
 /*----------1.1	- Headings----------*/
 
 /*----------1.2 - Body Copy----------*/
@@ -49,6 +56,29 @@
 
 /*----------2.1 - Main----------*/
 
+nav {
+	text-align: center;
+}
+
+nav li  {
+	display:inline-block;
+	list-style: none;
+	padding: 0 20px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+}
+
+nav a {
+	color: #616262;
+	text-decoration: none;
+}
+
+nav a:hover {
+	border-bottom: solid #43ace1;
+}
+
+
 /*----------2.2 - Sub----------*/
 
 /*----------2.3 - Footer----------*/
@@ -59,26 +89,31 @@
 
 /*----------3.1 - Site Structure----------*/
 
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border;
+	box-sizing: border-box;
+}
+
 .wrapper {
-	width: 65%;
+	width: 80%; /*original width was 1170px*/
 	margin: 0 auto;
 }
 
 .row:after {
-	content: "";
+	content: " ";
 	display: table;
 	clear: both;
 }
 
-[class*='col-'] {
+[class*="col-"] {
 	float: left;
-	padding: 0 10px 20px 10px;
-	
+	padding: 0 2rem 2rem 0;
 }
 
-[class*='col-'] div {
-	background-color: indianred;
-	height: 50px; /* remove heights for all other exercises */
+[class*="col-"]:last-of-type {
+	float: left;
+	padding-right: 0;
 }
 
 .col-1-2 {
@@ -191,6 +226,10 @@
 	width: 74.97%;
 }
 
+.col-10-12 {
+	width: 80%;
+}
+
 /*----------3.2	- Site Header----------*/
 
 /*----------3.3	- Site Footer----------*/
@@ -208,7 +247,7 @@
   overflow-x: hidden;
 }
 .holder {
-  width: 300%;
+  width: 500%;
 }
 .slide {
   float: left;
@@ -273,7 +312,18 @@
 
 /*----------5.1 - Text Transform----------*/
 
+.txt-uppercase {
+	text-transform:uppercase;
+}
+.txt-center {
+	text-align: center;
+}
+
 /*----------5.2 - Colors----------*/
+
+.bg-blue {
+	background-color: #ebf0f6;
+}
 
 /*----------5.3 - Alignments----------*/
 
@@ -281,7 +331,18 @@
 6.0 - RESPONSIVE / MEDIA QUERIES
 -------------------------------------------------------------- */
 
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
 @media screen and (max-width: 768px) {
+	
 	.wrapper {
 		width: 95%;
 	}
