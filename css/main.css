@@ -36,6 +36,7 @@ html {
 }
 body {
 	font-family: 'Catamaran', sans-serif;
+	color: #616262;
 }
 
 /*----------1.1	- Headings----------*/
@@ -54,16 +55,44 @@ h2 {
 
 /*----------1.3 - Button----------*/
 
-.col-1-2 .bg-blue li {
+
+.button-top li {
 	display: inline-block;
+	margin-top: 10px;
+	padding-right: 10px;
+	padding-left: 0;
+}
+
+.button-top a, .link a {
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	text-decoration: none;
+
 }
 
 .button-top a {
-	text-transform: uppercase;
-	border-radius: 10px;
-	text-decoration: none;
-	padding: 16px 30px;
-	
+	border: 1.5px solid #43ace1;
+	padding: 5px 30px;
+	color: #616262;
+}
+
+.button-top a:hover {
+	background-color: #43ace1;
+	color: #ebf0f6;
+}
+
+.link a {
+	background-color: #616262;
+	color: #ebf0f6;
+	padding: 5px 123px;
+}
+
+.link a:hover {
+	border: 1.5px solid #43ace1;
+	background-color: #ebf0f6;
+	color: #616262;
+	padding: 5px 122px;
 }
 
 /*----------1.4 - Lists----------*/
@@ -85,10 +114,10 @@ nav {
 nav li  {
 	display:inline-block;
 	list-style: none;
-	padding: 0 30px;
+	padding: 0 40px;
     font-family: 'Saira Extra Condensed', sans-serif;
 	text-transform: uppercase;
-	font-size: 1.25rem;
+	font-size: 1.3rem;
 }
 
 nav a {
@@ -368,8 +397,24 @@ nav a:hover {
 
 .link {
     position: absolute;
-    bottom: 0px; /*your button position*/
-    right: 0px; /*your button position*/
+    top: 260px; /*your button position*/
+    left: 0px; /*your button position*/
+}
+
+.bg-img, .bg-img-right {
+	position: relative;
+}
+
+.txt-top {
+	position: absolute;
+	z-index: 999;
+	left: 650px;
+	bottom: 88px;
+}
+
+.txt-top-left {
+	position: absolute;
+	z-index: 999;
 }
 
 /*--------------------------------------------------------------
