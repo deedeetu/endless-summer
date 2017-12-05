@@ -72,12 +72,19 @@ p {
 	padding-left: 0;
 }
 
-.prim-btn a, .sec-btn a {
+.prim-btn a, .sec-btn a, .third-btn a {
 	font-family: 'Saira Extra Condensed', sans-serif;
-	font-size: 1.2rem;
 	text-transform: uppercase;
 	text-decoration: none;
 
+}
+
+.prim-btn a, .third-btn a {
+	font-size:  1.2rem;
+}
+
+.sec-btn a {
+	font-size: 1.8rem;
 }
 
 .prim-btn a {
@@ -92,16 +99,25 @@ p {
 }
 
 .sec-btn a {
-	background-color: #616262;
 	color: #ebf0f6;
-	padding: 6px 123px;
+	background-color: #616262;
+	padding: 8px 90px;
 }
 
-.sec-btn a:hover {
+.sec-btn a:hover, .third-btn a:hover {
 	border: 1.5px solid #43ace1;
 	background-color: #ebf0f6;
 	color: #616262;
-	padding: 5px 122px;
+}
+
+.third-btn {
+	text-align: center;
+}
+
+.third-btn a {
+	color: #ebf0f6;
+	background-color: #616262;
+	padding: 5px 50px;
 }
 
 /*----------1.4 - Lists----------*/
@@ -109,6 +125,77 @@ p {
 /*----------1.5 - Table----------*/
 
 /*----------1.6 - Form----------*/
+
+table {
+	border-collapse: collapse;
+	display: inline-block;
+}
+
+tr td:nth-of-type(1) {
+	text-align: left;
+}
+
+thead, tr:last-child{
+	border-bottom: 4px solid #fff;
+}
+
+td {
+	padding: 10px 40px;
+	text-align: center;
+}
+
+tr:nth-child(even) {
+	background-color: #fff;
+}
+
+th, caption {
+	font: 18px 'myriad-pro', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+	color: #fff;
+}
+
+/*----------1.6 - Form----------*/
+
+form {
+	margin: 0 auto;
+}
+
+label, input, textarea {
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+input {
+	height: 45px;
+	padding: 10px 15px;
+	border: none;
+}
+
+label, form a {
+	color: #616262;
+}
+
+label {
+	margin-top: 20px;
+	font: 1.5rem 'Saira Extra Condensed', sans-serif;
+	text-transform: uppercase;
+
+}
+
+input > placeholder {
+	color: #43ace1;
+}
+
+textarea {
+	height: 152px;
+	width: 100%;
+	padding: 10px 15px;
+	border: none;
+}
+
 
 /*--------------------------------------------------------------
 2.0 - NAVIGATION MENUS
@@ -124,9 +211,8 @@ nav li  {
 	display:inline-block;
 	list-style: none;
 	padding: 0 40px;
-    font-family: 'Saira Extra Condensed', sans-serif;
+    font: 1.3rem 'Saira Extra Condensed', sans-serif;
 	text-transform: uppercase;
-	font-size: 1.3rem;
 }
 
 nav a {
@@ -286,12 +372,46 @@ nav a:hover {
 }
 
 .col-10-12 {
-	width: 80%;
+	width: 100%;
 }
 
 /*----------3.2	- Site Header----------*/
 
 /*----------3.3	- Site Footer----------*/
+
+footer ul span{
+	display: none;
+}
+
+footer ul {
+	
+}
+
+footer ul a, footer ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+footer ul li:last-child {
+	padding-right: 0;
+}
+
+footer ul li a{
+	width: 25px;
+	height: 25px;
+}
+
+footer ul li:first-child a{
+	background: url("../img/icon-fb.png") no-repeat 0 0;
+}
+
+footer ul li:nth-child(2) a{
+	background: url("../img/icon-ins.png") no-repeat 0 0;
+}
+
+footer ul li a:hover{
+	background-position: 0 -25px;
+}
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
@@ -318,15 +438,7 @@ nav a:hover {
   height: 400px;
   position: relative;
 }
-.temp {
-  position: absolute;
-  color: white;
-  font-size: 100px;
-  bottom: 15px;
-  left: 15px;
-  font-family: 'Josefin Slab', serif;
-  font-weight: 100;
-}
+
 #slide-0 {
   background-image: url('../img/img-slider-1.jpg');
 }
@@ -376,6 +488,27 @@ nav a:hover {
 	top: 50px;
 }
 
+#package-1, #package-2, #package-3, #package-4, #package-5 {
+	height: 300px;
+	width: 300px;
+}
+
+#package-1 {
+	background-image: url(../img/img-package-1.png);
+}
+#package-2 {
+	background-image: url(../img/img-package-2.png);
+}
+#package-3 {
+	background-image: url(../img/img-package-3.png);
+}
+#package-4 {
+	background-image: url(../img/img-package-4.png);
+}
+#package-5 {
+	background-image: url(../img/img-package-5.png);
+}
+
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
@@ -411,16 +544,6 @@ nav a:hover {
 
 /*----------5.3 - Alignments----------*/
 
-.img-holder {
-	position: relative;
-}
-
-.sec-btn a {
-    position: absolute;
-    top: 260px; /*your button position*/
-    left: 0px; /*your button position*/
-}
-
 .pos-rel {
 	position: relative;
 	top: 0;
@@ -438,7 +561,9 @@ nav a:hover {
 	float: right;
 }
 
-
+#package-1, #package-2, #package-3, #package-4, #package-5 p {
+	text-align: center;
+}
 /*--------------------------------------------------------------
 6.0 - RESPONSIVE / MEDIA QUERIES
 -------------------------------------------------------------- */
@@ -458,5 +583,34 @@ nav a:hover {
 	.wrapper {
 		width: 95%;
 	}
-	
+	.bg-blue, .bg-grey {
+		padding: 0;
+	}
+	nav li {
+		padding: 0 10px;
+	}
+	.col-1-2 {
+		width: 100%;
+	}
+	.col-s-1-2 {
+		width: 50%;
+	}
+	.col-1-7 {
+		width: 50%;
+	}
+	.col-2-5 {
+		
+	}
+	.col-3-5 {
+		width: 100%;
+	}
+	.col-3-12 {
+		width: 100%;
+	}
+	.col-9-12 {
+		width: 100%;
+	}
+	.col-10-12 {
+		width: 100%;
+	}
 }

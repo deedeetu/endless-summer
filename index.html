@@ -13,17 +13,15 @@
 <body>
 	
 	<header>
-		<div class="wrapper">
-			<nav> 
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><h1><img src="img/logo-endlesssummer.png" height="50" alt="Endless Summer"></h1></li>
-					<li><a href="#packages">Packages</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
+		<nav> 
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><h1><img src="img/logo-endlesssummer.png" height="50" alt="Endless Summer"></h1></li>
+				<li><a href="#packages">Packages</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>	
 		
 		<div class="pos-rel">
 			<div class="row">
@@ -93,16 +91,15 @@
 		</div>
 	</div>
 	
-	<div class="bg-blue">
+	<div class="bg-blue" id="packages">
 		<section class="wrapper sec-btn">
 			<header>
-				<h2 id="packages" class="txt-center">Packages</h2><hr>
+				<h2 class="txt-center">Packages</h2><hr>
 			</header>
 			<p class="txt-center" id="lead-in">You will also receive Half price dinner voucher and complimentary drink at local restaurant for each lesson.</p>
 			
 			<section class="row">
-				<div class="col-2-5 img-holder">
-					<img src="img/img-package-1.png" alt="image description"/>
+				<div class="col-2-5" id="package-1">
 					<p><a href="#">Book Now</a></p>
 				</div>
 				
@@ -110,23 +107,20 @@
 					<header>
 						<h3 id="5-days">5 Day Deluxe Package - $320</h3>
 					</header>
-					<p><b>4 x 4 hour surf safari (From Pick up to drop off)</b></p>
-					<p><b>1 x 2.5 hour PRIVATE LESSON (From Pick up to drop off)</b></p>
+					<p><b>4 x 4 hour surf safari (From Pick up to drop off)<br>1 x 2.5 hour PRIVATE LESSON (From Pick up to drop off)</b></p>
 					<p>Finish on a high note with your last session completely tailored to your individual needs to really get the most out of your surfing.</p>
 					<ul>
 					<li>This course is suited for all ages and abilities and is one of <strong>our most popular packages</strong></li>
-					<li>We can show you a <strong>wide range of techniques</strong> to make you a competent surfer!</li>
-					<li><strong>Our guides love teaching the 5 day course</strong> as we can really see people’s progression from the start of the week to the end.</li>
-					<li>We will aim to experiment with <strong>riding different surfboards</strong> and possibly introducing more <strong>maneuverable hardboards.</strong></li>
-					<li>Outback surfing techniques</li>
-					<li>How to sit up and spin your board prior to paddling for a wave</li>
+					<li>Show you a <strong>wide range of techniques</strong> to make you a competent surfer!</li>
+					<li><strong>Our guides love teaching the 5 day course</strong> as we can really see people’s progression from start to the end.</li>
+					<li>Aim to experiment with <strong>riding different surfboards</strong> and more <strong>maneuverable hardboards.</strong></li>
+					<li>Outback surfing techniques and how to sit up and spin your board prior to paddling for a wave.</li>
 					</ul>
 				</div>
 			</section>
 
 			<section class="row">
-				<div class="col-2-5 img-holder">
-					<img src="img/img-package-2.png" alt="image description"/>
+				<div class="col-2-5" id="package-2">
 					<p><a href="#">Book Now</a></p>
 				</div>
 				
@@ -145,8 +139,7 @@
 			</section>
 
 			<section class="row">
-				<div class="col-2-5 img-holder">
-					<img src="img/img-package-3.png" alt="image description"/>
+				<div class="col-2-5" id="package-3">
 					<p><a href="#">Book Now</a></p>
 				</div>
 				
@@ -169,8 +162,7 @@
 			</section>
 
 			<section class="row">
-				<div class="col-2-5 img-holder">
-					<img src="img/img-package-4.png" alt="image description"/>
+				<div class="col-2-5" id="package-4">
 					<p><a href="#">Book Now</a></p>
 				</div>
 				<div class="col-3-5">
@@ -191,8 +183,7 @@
 			</section>
 
 			<div class="row">
-				<div class="col-2-5 img-holder">
-					<img src="img/img-package-5.png" alt="image description"/>
+				<div class="col-2-5" id="package-5">
 					<p><a href="#">Book Now</a></p>
 				</div>
 				<section class="col-3-5">
@@ -263,16 +254,16 @@
 		</div>
 	</div>
 	
-	<section class="bg-grey txt-white">
+	<div class="bg-grey txt-white">
 		<div class="wrapper">
-			<p>Get ready for your surf adventure!</p> <p><a href="#">Read it!</a></p>
+			<p>Get ready for your surf adventure! <a href="http://www.theinertia.com/surf/8-awesome-ways-to-prepare-for-a-surf-trip/" target="_blank">Read it!</a></p>
 		</div>
-	</section>
+	</div>
 	
-	<div class="bg-blue">
+	<div class="bg-blue" id="contact">
 		<section class="wrapper row">
 			<header>
-				<h2 id="contact">Contact Us</h2><hr>
+				<h2>Contact Us</h2><hr>
 			</header>
 			<form>
 				<div class="col-1-2">
@@ -292,31 +283,33 @@
 				<div class="col-1-2">
 					<label for="message">Message</label>
 					<textarea id="message" name="message" rows="7" placeholder="Message"></textarea>
-					<p><a href="#">Submit</a></p>
+					<p class="third-btn"><a href="#">Submit</a></p>
 				</div>
 			</form>
 
 			<div class="col-9-12">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.516747858497!2d174.80153181566178!3d-37.82478677975043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d12d7a631389ba9%3A0x663d8ea3e5c9e46f!2s5B+Whaanga+Rd%2C+Raglan+3297%2C+New+Zealand!5e0!3m2!1sen!2sus!4v1511964980665" width="700" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.516747858497!2d174.80153181566178!3d-37.82478677975043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d12d7a631389ba9%3A0x663d8ea3e5c9e46f!2s5B+Whaanga+Rd%2C+Raglan+3297%2C+New+Zealand!5e0!3m2!1sen!2sus!4v1511964980665" width="100%" height="70%" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
-			<section class="col-3-12">
-				<header>
-					<h4>Address:</h4>
-				</header>
-				<p>5B Whaanga Rd,<br>Raglan 3297<br>New Zealand</p>
-			</section>
-			<section>
-				<header>
-					<h4>Phone:</h4>
-				</header>
-				<a href="tel:6478257873">+64 7-825 7873</a>
-			</section>
+			<div class="col-3-12">
+				<section class="col-s-1-2">
+					<header>
+						<h4>Address:</h4>
+					</header>
+					<p>5B Whaanga Rd,<br>Raglan 3297<br>New Zealand</p>
+				</section>
+				<section class="col-s-1-2">
+					<header>
+						<h4>Phone:</h4>
+					</header>
+					<p><a href="tel:+6478257873">64 7-825 7873</a></p>
+				</section>
+			</div>
 			
 			<form>
 				<div class=" col-10-12">
 					<label>Email Subscription</label>
 					<input name="email" type="text" placeholder="Email" />
-					<p><a href="#">Submit</a></p>
+					<p class="third-btn"><a href="#">Submit</a></p>
 				</div>
 			</form>
 		</section>
@@ -324,6 +317,12 @@
 	
 	<footer class="wrapper row">
 		<h5 class="col-1-7"><img src="img/logo-endlesssummer.png" height="50" alt="Endless Summer Logo"></h5>
+		<div class="col-1-7">
+			<ul>
+				<li><a href="https://www.facebook.com/DeeDeeTu" target="_blank"></a>  <span>Facebook</span></li>
+				<li><a href="https://www.instagram.com/deedee_tu/" target="_blank"></a>  <span>Instagram</span> </li>
+			</ul>
+		</div>
 	</footer>
 	
 <script type="text/javascript" src="js/imageslider.js"></script>
