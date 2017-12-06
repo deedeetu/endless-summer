@@ -112,6 +112,7 @@ p {
 
 .third-btn {
 	text-align: center;
+	padding-top: 10px;
 }
 
 .third-btn a {
@@ -126,37 +127,6 @@ p {
 
 /*----------1.6 - Form----------*/
 
-table {
-	border-collapse: collapse;
-	display: inline-block;
-}
-
-tr td:nth-of-type(1) {
-	text-align: left;
-}
-
-thead, tr:last-child{
-	border-bottom: 4px solid #fff;
-}
-
-td {
-	padding: 10px 40px;
-	text-align: center;
-}
-
-tr:nth-child(even) {
-	background-color: #fff;
-}
-
-th, caption {
-	font: 18px 'myriad-pro', sans-serif;
-	text-transform: uppercase;
-	margin-bottom: 24px;
-	color: #fff;
-}
-
-/*----------1.6 - Form----------*/
-
 form {
 	margin: 0 auto;
 }
@@ -165,11 +135,11 @@ label, input, textarea {
     display: block;
     text-align: left;
     margin-bottom: 4px;
-    width: 100%;
+    width: 90%;
 }
 
 input {
-	height: 45px;
+	height: 35px;
 	padding: 10px 15px;
 	border: none;
 }
@@ -185,12 +155,9 @@ label {
 
 }
 
-input > placeholder {
-	color: #43ace1;
-}
 
 textarea {
-	height: 152px;
+	height: 160px;
 	width: 100%;
 	padding: 10px 15px;
 	border: none;
@@ -256,9 +223,6 @@ nav a:hover {
 	float: left;
 }
 
-.wrapper [class*="col-"] {
-	padding: 0 1rem 2rem 1rem;
-}
 
 
 .col-1-2 {
@@ -301,8 +265,16 @@ nav a:hover {
 	width: 49.98%;
 }
 
+.col-5-6 {
+	width: 83.3%;
+}
+
 .col-1-7 {
 	width: 14.28%;
+}
+
+.col-6-7 {
+	width: 85.68%;
 }
 
 .col-4-7 {
@@ -319,6 +291,10 @@ nav a:hover {
 
 .col-6-8 {
 	width: 75%;
+}
+
+.col-7-8 {
+	width: 87.5%;
 }
 
 .col-2-8 {
@@ -384,7 +360,7 @@ footer ul span{
 }
 
 footer ul {
-	
+	text-align: right;
 }
 
 footer ul a, footer ul li{
@@ -509,6 +485,28 @@ footer ul li a:hover{
 	background-image: url(../img/img-package-5.png);
 }
 
+#bg-instructors {
+	 background: url(../img/img-slider-3.jpg) no-repeat top right;
+}
+
+#bg-about {
+	 background: url(../img/img-slider-4.jpg) no-repeat top left;
+}
+
+#bg-services {
+	background: url(../img/img-slider-5.jpg) no-repeat top right;
+}
+
+#bg-about, #bg-instructors, #bg-services {
+	-webkit-background-size: contain;
+    -ms-background-size: contain;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+	background-size: contain;
+	margin: 20px 0;
+	padding: 20px 0;
+}
+
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
@@ -552,8 +550,8 @@ footer ul li a:hover{
 
 .pos-abs {
 	position: absolute;
-	top: 0;
-	left: 0;
+	bottom: 50px;
+	right: 50px;
 	width: 100%;
 }
 
@@ -581,36 +579,59 @@ footer ul li a:hover{
 @media screen and (max-width: 768px) {
 	
 	.wrapper {
-		width: 95%;
+		width: 100%;
+		
+	}
+	.row {
+		padding: 0 10px;
 	}
 	.bg-blue, .bg-grey {
-		padding: 0;
+		padding: 10px 20px;
 	}
+	input {
+		width: 100%;
+	}
+	
+	.pos-rel {
+		width: 100%;
+	}
+	
+	#bg-instructors .bg-grey, #bg-services .bg-grey {
+		background-color: rgba(97, 98, 98, .5);
+	}
+	#bg-about .bg-blue {
+		background-color:  rgba(235, 240, 246, .5)
+	}
+	
+	#bg-services, #bg-about, #bg-instructors {
+		padding: 20px 10px;
+		background-size: cover;
+	}
+	
+	#bg-services, #bg-about {
+		margin: 0;
+	}
+		
+	#bg-instructors {
+		margin: 30px 0 0;
+	}
+	
 	nav li {
 		padding: 0 10px;
 	}
-	.col-1-2 {
+	.pos-rel .col-1-2, .pos-abs .col-1-2 {
+		width: 100%
+	}
+	.col-1-2, .col-3-5, .col-3-12, .col-5-6, .col-1-6, .col-10-12 {
 		width: 100%;
 	}
-	.col-s-1-2 {
+	.col-s-1-2, footer .col-1-2 {
 		width: 50%;
 	}
-	.col-1-7 {
-		width: 50%;
+	footer .col-1-2:last-child {
+		text-align: right;
 	}
 	.col-2-5 {
-		
-	}
-	.col-3-5 {
-		width: 100%;
-	}
-	.col-3-12 {
-		width: 100%;
-	}
-	.col-9-12 {
-		width: 100%;
-	}
-	.col-10-12 {
-		width: 100%;
+		display: none;
 	}
 }
