@@ -21,6 +21,7 @@
 	3.3	- Site Footer
 4.0 - Media
 	4.1 - Image Slider
+	4.2 - Other Background
 5.0 - Utility
 	5.1 - Text Transform
 	5.2 - Colors
@@ -405,6 +406,42 @@ footer ul li a:hover{
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
+
+/*----------4.1 - Image Slider----------*/
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+/*----------4.2 - Other Background----------*/
 
 #package-1, #package-2, #package-3, #package-4, #package-5 {
 	height: 300px;
