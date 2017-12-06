@@ -62,6 +62,10 @@ p {
 	padding-bottom: 10px;
 }
 
+#article {
+	font: 500 2rem 'Saira Extra Condensed', sans-serif;
+}
+
 /*----------1.3 - Button----------*/
 
 
@@ -72,7 +76,7 @@ p {
 	padding-left: 0;
 }
 
-.prim-btn a, .sec-btn a, .third-btn a {
+.prim-btn a, .sec-btn a, .third-btn a, #article a{
 	font-family: 'Saira Extra Condensed', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -104,7 +108,7 @@ p {
 	padding: 8px 90px;
 }
 
-.sec-btn a:hover, .third-btn a:hover {
+.sec-btn a:hover, .third-btn a:hover, #article a:hover {
 	border: 1.5px solid #43ace1;
 	background-color: #ebf0f6;
 	color: #616262;
@@ -115,10 +119,15 @@ p {
 	padding-top: 10px;
 }
 
-.third-btn a {
+.third-btn a, #article a {
 	color: #ebf0f6;
 	background-color: #616262;
 	padding: 5px 50px;
+}
+
+#article a {
+	border: 1.5px solid #ebf0f6;
+	margin-left: 20px;
 }
 
 /*----------1.4 - Lists----------*/
@@ -131,16 +140,20 @@ form {
 	margin: 0 auto;
 }
 
+form .col-1-2 {
+	padding-bottom: 20px;
+}
+
 label, input, textarea {
     display: block;
     text-align: left;
-    margin-bottom: 4px;
+	margin-bottom: 4px;
     width: 90%;
 }
 
 input {
 	height: 35px;
-	padding: 10px 15px;
+	padding: 10px 10px;
 	border: none;
 }
 
@@ -152,7 +165,6 @@ label {
 	margin-top: 20px;
 	font: 1.5rem 'Saira Extra Condensed', sans-serif;
 	text-transform: uppercase;
-
 }
 
 
@@ -223,8 +235,6 @@ nav a:hover {
 	float: left;
 }
 
-
-
 .col-1-2 {
 	width: 50%;
 }
@@ -255,10 +265,12 @@ nav a:hover {
 
 .col-3-5 {
 	width: 60%;
+	padding: 30px;
 }
 
 .col-1-6 {
 	width: 16.66%;
+	padding-left: 30px;
 }
 
 .col-3-6 {
@@ -580,7 +592,6 @@ footer ul li a:hover{
 	
 	.wrapper {
 		width: 100%;
-		
 	}
 	.row {
 		padding: 0 10px;
@@ -588,14 +599,25 @@ footer ul li a:hover{
 	.bg-blue, .bg-grey {
 		padding: 10px 20px;
 	}
+	.col-1-2, .col-3-5, .col-3-12, .col-5-6, .col-1-6, .col-10-12 {
+		width: 100%;
+	}
+	.col-2-5 {
+		display: none;
+	}
+	.col-s-1-2, footer .col-1-2 {
+		width: 50%;
+	}
+	#lead-in {
+	font-size: 1.1rem;
+	padding-bottom: 0;
+	}	
 	input {
 		width: 100%;
 	}
-	
-	.pos-rel {
-		width: 100%;
+	nav li {
+		padding: 0 10px;
 	}
-	
 	#bg-instructors .bg-grey, #bg-services .bg-grey {
 		background-color: rgba(97, 98, 98, .5);
 	}
@@ -615,23 +637,7 @@ footer ul li a:hover{
 	#bg-instructors {
 		margin: 30px 0 0;
 	}
-	
-	nav li {
-		padding: 0 10px;
-	}
-	.pos-rel .col-1-2, .pos-abs .col-1-2 {
-		width: 100%
-	}
-	.col-1-2, .col-3-5, .col-3-12, .col-5-6, .col-1-6, .col-10-12 {
-		width: 100%;
-	}
-	.col-s-1-2, footer .col-1-2 {
-		width: 50%;
-	}
 	footer .col-1-2:last-child {
 		text-align: right;
-	}
-	.col-2-5 {
-		display: none;
 	}
 }
