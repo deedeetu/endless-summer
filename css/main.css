@@ -20,6 +20,7 @@
 	3.2	- Site Header
 	3.3	- Site Footer
 4.0 - Media
+	4.1 - Image Slider
 5.0 - Utility
 	5.1 - Text Transform
 	5.2 - Colors
@@ -265,7 +266,7 @@ nav a:hover {
 
 .col-3-5 {
 	width: 60%;
-	padding: 30px;
+	padding-left: 30px;
 }
 
 .col-1-6 {
@@ -404,77 +405,6 @@ footer ul li a:hover{
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
-
-.slider-wrap {
-  width: 700px;
-  height: 400px;
-}
-.slider {
-  overflow-x: hidden;
-}
-
-.slider-nav li {
-	display: inline-block;
-}
-
-.holder {
-  width: 500%;
-}
-.slide {
-  float: left;
-  width: 700px;
-  height: 400px;
-  position: relative;
-}
-
-#slide-0 {
-  background-image: url('../img/img-slider-1.jpg');
-}
-#slide-1 {
-  background-image: url('../img/img-slider-2.jpg');
-}
-#slide-2 {
-  background-image: url('../img/img-slider-3.jpg');
-}
-#slide-4 {
-  background-image: url('../img/img-slider-4.jpg');
-}
-#slide-3 {
-  background-image: url('../img/img-slider-5.jpg');
-}
-.slide:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(transparent, black);
-}
-.slider-nav {
-  text-align: center;
-  margin: 10px 0 0 0;
-}
-.slider-nav a {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  background: #ddd;
-  overflow: hidden;
-  text-indent: -9999px;
-  border-radius: 50%;
-}
-.slider-nav a.active {
-  background: #999;
-}
-
-.floating-package {
-	width: 700px;
-	max-width: calc(100% - 40px);
-	position: relative;
-	left: -100px;
-	top: 50px;
-}
 
 #package-1, #package-2, #package-3, #package-4, #package-5 {
 	height: 300px;
