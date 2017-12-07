@@ -113,6 +113,11 @@ p {
 	padding-top: 10px;
 }
 
+#packages .sec-btn {
+	padding-top: 253px;
+	padding-right: 50px;
+}
+
 #article a {
 	border: 1.5px solid #ebf0f6;
 	margin-left: 20px;
@@ -434,7 +439,6 @@ footer ul li a:hover{
 /*----------4.2 - Other Background----------*/
 
 #package-5day, #package-2day, #package-halfday, #package-3day, #package-4day {
-	height: 300px;
 	-webkit-background-size: cover;
     -ms-background-size: cover;
     -o-background-size: cover;
@@ -484,6 +488,7 @@ footer ul li a:hover{
 	list-style-image: url(../img/wave.png);
 }
 
+
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
@@ -515,6 +520,13 @@ footer ul li a:hover{
 
 .txt-white {
 	color: #ebf0f6;
+}
+
+hr {
+	height: 2px;
+	color: #43ace1;
+	background-color: #43ace1;
+	border: none;
 }
 
 /*----------5.3 - Alignments----------*/
@@ -559,32 +571,45 @@ footer ul li a:hover{
 	.wrapper {
 		width: 100%;
 	}
+	
 	.row {
 		padding: 0 10px;
 	}
+	
+	.pos-rel .row {
+		padding: 0;
+	}
+	
 	.bg-blue, .bg-grey {
 		padding: 10px 20px;
 	}
+	
 	.col-1-2, .col-3-12, .col-5-6, .col-1-6, .col-10-12, .col-1-3, .col-2-3 {
 		width: 100%;
 	}
+	
 	.col-s-1-2, footer .col-1-2 {
 		width: 50%;
 	}
+	
 	.pos-abs {
 		top: 0;
 		right:0;
 	}
+	
 	#lead-in {
 	font-size: 1.1rem;
 	padding-bottom: 0;
 	}	
+	
 	input {
 		width: 100%;
 	}
+	
 	nav li {
 		padding: 0 10px;
 	}
+	
 	#bg-instructors .bg-grey, #bg-services .bg-grey {
 		background-color: rgba(97, 98, 98, .5);
 	}
@@ -606,6 +631,7 @@ footer ul li a:hover{
 	}
 	
 	#package-5day, #package-2day, #package-3day, #package-halfday, #package-4day {
+		height: 30px;
 		background-image: none;
 	}
 }
