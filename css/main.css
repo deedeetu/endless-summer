@@ -82,15 +82,7 @@ p {
 	font-family: 'Saira Extra Condensed', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
-
-}
-
-.prim-btn a, .third-btn a {
 	font-size:  1.2rem;
-}
-
-.sec-btn a {
-	font-size: 1.8rem;
 }
 
 .prim-btn a {
@@ -104,33 +96,28 @@ p {
 	color: #ebf0f6;
 }
 
-.sec-btn a {
+.sec-btn a, #article a {
 	color: #ebf0f6;
 	background-color: #616262;
-	padding: 8px 90px;
+	padding: 10px 50px;
 }
 
-.sec-btn a:hover, .third-btn a:hover, #article a:hover {
+.sec-btn a:hover, #article a:hover {
 	border: 1.5px solid #43ace1;
 	background-color: #ebf0f6;
 	color: #616262;
 }
 
-.third-btn {
+.sec-btn {
 	text-align: center;
 	padding-top: 10px;
-}
-
-.third-btn a, #article a {
-	color: #ebf0f6;
-	background-color: #616262;
-	padding: 10px 50px;
 }
 
 #article a {
 	border: 1.5px solid #ebf0f6;
 	margin-left: 20px;
 }
+
 
 /*----------1.4 - Lists----------*/
 
@@ -409,59 +396,66 @@ footer ul li a:hover{
 
 /*----------4.1 - Image Slider----------*/
 
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
+/* Prevents slides from flashing */
+#slides {
+  display:none;
+}
 
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
+.slidesjs-pagination {
+    text-align: center;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+  display: inline-block;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 10px;
+    height: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.slidesjs-pagination li a.active{
+  background: grey;
+}
+
+.slidesjs-previous, 
+.slidesjs-next {
   display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
+}
 
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
-
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }
 
 /*----------4.2 - Other Background----------*/
 
-#package-1, #package-2, #package-3, #package-4, #package-5 {
+#package-5day, #package-2day, #package-halfday, #package-3day, #package-4day {
 	height: 300px;
-	width: 300px;
+	-webkit-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+	background-size: cover;
 }
 
-#package-1 {
-	background-image: url(../img/img-package-1.png);
+#package-5day {
+	background: url(../img/img-package-5day.png) no-repeat;
 }
-#package-2 {
-	background-image: url(../img/img-package-2.png);
+#package-halfday {
+	background: url(../img/img-package-1:2day.png) no-repeat;
 }
-#package-3 {
-	background-image: url(../img/img-package-3.png);
+#package-2day {
+	background: url(../img/img-package-2day.png)no-repeat;
 }
-#package-4 {
-	background-image: url(../img/img-package-4.png);
+#package-3day {
+	background: url(../img/img-package-3day.png) no-repeat;
 }
-#package-5 {
-	background-image: url(../img/img-package-5.png);
+#package-4day {
+	background: url(../img/img-package-4day.png) no-repeat;
 }
 
 #bg-instructors {
@@ -484,6 +478,10 @@ footer ul li a:hover{
 	background-size: contain;
 	margin: 20px 0;
 	padding: 20px 0;
+}
+
+#packages li {
+	list-style-image: url(../img/wave.png);
 }
 
 /*--------------------------------------------------------------
@@ -529,16 +527,17 @@ footer ul li a:hover{
 
 .pos-abs {
 	position: absolute;
-	bottom: 50px;
+	bottom: 95px;
 	right: 50px;
 	width: 100%;
+	z-index: 10;
 }
 
 .push-right {
 	float: right;
 }
 
-#package-1, #package-2, #package-3, #package-4, #package-5 p {
+#package-1, #package-2, #package-2day, #package-4, #package-5 p {
 	text-align: center;
 }
 /*--------------------------------------------------------------
@@ -566,14 +565,15 @@ footer ul li a:hover{
 	.bg-blue, .bg-grey {
 		padding: 10px 20px;
 	}
-	.col-1-2, .col-3-5, .col-3-12, .col-5-6, .col-1-6, .col-10-12 {
+	.col-1-2, .col-3-12, .col-5-6, .col-1-6, .col-10-12, .col-1-3, .col-2-3 {
 		width: 100%;
-	}
-	.col-2-5 {
-		display: none;
 	}
 	.col-s-1-2, footer .col-1-2 {
 		width: 50%;
+	}
+	.pos-abs {
+		top: 0;
+		right:0;
 	}
 	#lead-in {
 	font-size: 1.1rem;
@@ -588,7 +588,7 @@ footer ul li a:hover{
 	#bg-instructors .bg-grey, #bg-services .bg-grey {
 		background-color: rgba(97, 98, 98, .5);
 	}
-	#bg-about .bg-blue {
+	#bg-about .bg-blue, .pos-abs .bg-blue {
 		background-color:  rgba(235, 240, 246, .5)
 	}
 	
@@ -600,11 +600,12 @@ footer ul li a:hover{
 	#bg-services, #bg-about {
 		margin: 0;
 	}
-		
-	#bg-instructors {
-		margin: 30px 0 0;
-	}
+	
 	footer .col-1-2:last-child {
 		text-align: right;
+	}
+	
+	#package-5day, #package-2day, #package-3day, #package-halfday, #package-4day {
+		background-image: none;
 	}
 }
