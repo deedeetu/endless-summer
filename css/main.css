@@ -450,7 +450,7 @@ footer ul li a:hover{
 	background: url(../img/img-package-5day.png) no-repeat;
 }
 #package-halfday {
-	background: url(../img/img-package-1:2day.png) no-repeat;
+	background: url(../img/img-package-halfday.png) no-repeat;
 }
 #package-2day {
 	background: url(../img/img-package-2day.png)no-repeat;
@@ -484,7 +484,7 @@ footer ul li a:hover{
 	padding: 20px 0;
 }
 
-#packages li {
+li {
 	list-style-image: url(../img/wave.png);
 }
 
@@ -553,6 +553,11 @@ hr {
 	text-align: center;
 }
 
+
+/*--------------------------------------------------------------
+6.0 - RESPONSIVE / MEDIA QUERIES
+-------------------------------------------------------------- */
+
 .map-responsive{
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -567,10 +572,6 @@ hr {
     position: absolute;
 }
 
-
-/*--------------------------------------------------------------
-6.0 - RESPONSIVE / MEDIA QUERIES
--------------------------------------------------------------- */
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
