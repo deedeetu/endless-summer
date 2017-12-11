@@ -263,7 +263,7 @@ nav a:hover {
 
 .col-1-6 {
 	width: 16.66%;
-	padding-left: 30px;
+	padding: 20px 0 0 30px;
 }
 
 .col-3-6 {
@@ -354,7 +354,6 @@ nav a:hover {
 
 .col-10-12 {
 	width: 100%;
-	margin-top: -200px;
 }
 
 /*----------3.2	- Site Header----------*/
@@ -484,7 +483,7 @@ footer ul li a:hover{
 	padding: 20px 0;
 }
 
-li {
+#packages li {
 	list-style-image: url(../img/wave.png);
 }
 
@@ -497,11 +496,6 @@ li {
 
 .txt-center {
 	text-align: center;
-}
-
-.center-block {
-	margin: 0 auto;
-	float: none !important;
 }
 
 /*----------5.2 - Colors----------*/
@@ -549,27 +543,12 @@ hr {
 	float: right;
 }
 
-#package-1, #package-2, #package-2day, #package-4, #package-5 p {
-	text-align: center;
-}
-
-
 /*--------------------------------------------------------------
 6.0 - RESPONSIVE / MEDIA QUERIES
 -------------------------------------------------------------- */
-
-.map-responsive{
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-}
-.map-responsive iframe{
-    left: 0;
-    top: 0;
-    height: 60%;
-    width: 100%;
-    position: absolute;
+#map {
+	height: 200px;
+	margin-top:40px;
 }
 
 
@@ -626,7 +605,6 @@ hr {
 	input {
 		width: 100%;
 	}
-	
 	nav li {
 		padding: 0 10px;
 	}
