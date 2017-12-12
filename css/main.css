@@ -34,11 +34,15 @@
 ----------------------------------------------------------------*/
 
 html {
-	font-size: 14px;
+	font-size: 15px;
 }
 body {
 	font-family: 'Catamaran', sans-serif;
 	color: #616262;
+}
+
+h1, h2, h3, h4, h5, .prim-btn a, .sec-btn a, .third-btn a, #article a, label, nav li {
+	text-transform: uppercase;	
 }
 
 /*----------1.1	- Headings----------*/
@@ -46,17 +50,27 @@ body {
 h1, h2, h3, h4, h5 {
 	font-family: 'Saira Extra Condensed', sans-serif;
 	font-weight: 500;
-	text-transform: uppercase;
 }
 
 h2 {
 	font-size: 2rem;
 }
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
 
 /*----------1.2 - Body Copy----------*/
 
-p {
+p, label, input, textarea, .slidesjs-pagination li a {
 	display: block;
+}
+
+footer ul a, footer ul li, nav li, .slidesjs-pagination li, .prim-btn li {
+	display: inline-block;
 }
 
 #lead-in {
@@ -72,23 +86,19 @@ p {
 
 
 .prim-btn li {
-	display: inline-block;
 	margin-top: 10px;
-	padding-right: 10px;
-	padding-left: 0;
+	padding: 0 10px 0 0;
 }
 
 .prim-btn a, .sec-btn a, .third-btn a, #article a{
 	font-family: 'Saira Extra Condensed', sans-serif;
-	text-transform: uppercase;
 	text-decoration: none;
-	font-size:  1.2rem;
+	font-size:  1.1rem;
 }
 
 .prim-btn a {
 	border: 1.5px solid #43ace1;
 	padding: 5px 30px;
-	color: #616262;
 }
 
 .prim-btn a:hover {
@@ -96,25 +106,26 @@ p {
 	color: #ebf0f6;
 }
 
-.sec-btn a, #article a {
+.sec-btn a, #article a, .third-btn a {
 	color: #ebf0f6;
 	background-color: #616262;
+}
+
+.sec-btn a {
+	padding: 11px 122px;
+}
+
+#article a, .third-btn a {
 	padding: 10px 50px;
 }
 
-.sec-btn a:hover, #article a:hover {
+.sec-btn a:hover, #article a:hover, .third-btn a:hover {
 	border: 1.5px solid #43ace1;
 	background-color: #ebf0f6;
-	color: #616262;
 }
 
-.sec-btn {
-	text-align: center;
-	padding-top: 10px;
-}
-
-#packages .sec-btn {
-	padding: 253px 50px 0 0;
+.sec-btn a:hover {
+	padding: 10px 120px;
 }
 
 #article a {
@@ -122,10 +133,15 @@ p {
 	margin-left: 20px;
 }
 
+.prim-btn a, .sec-btn a:hover, #article a:hover, .third-btn a:hover {
+	color: #616262;
+}
 
 /*----------1.4 - Lists----------*/
 
-/*----------1.5 - Table----------*/
+#bg-instructors ul, #bg-services ul {
+	list-style-type: none;
+}
 
 /*----------1.6 - Form----------*/
 
@@ -138,7 +154,6 @@ form .col-1-2 {
 }
 
 label, input, textarea {
-    display: block;
     text-align: left;
 	margin-bottom: 4px;
     width: 90%;
@@ -157,7 +172,6 @@ label, form a {
 label {
 	margin-top: 20px;
 	font: 1.5rem 'Saira Extra Condensed', sans-serif;
-	text-transform: uppercase;
 }
 
 
@@ -180,11 +194,9 @@ nav {
 }
 
 nav li  {
-	display:inline-block;
 	list-style: none;
 	padding: 0 40px;
     font: 1.3rem 'Saira Extra Condensed', sans-serif;
-	text-transform: uppercase;
 }
 
 nav a {
@@ -197,10 +209,6 @@ nav a:hover {
 }
 
 
-/*----------2.2 - Sub----------*/
-
-/*----------2.3 - Footer----------*/
-
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
@@ -208,6 +216,8 @@ nav a:hover {
 /*----------3.1 - Site Structure----------*/
 
 *, *:after, *:before {
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border;
 	box-sizing: border-box;
@@ -238,6 +248,7 @@ nav a:hover {
 
 .col-2-3 {
 	width: 66.66%;
+	padding-left: 10px;
 }
 
 .col-1-4 {
@@ -344,6 +355,7 @@ nav a:hover {
 .col-1-12 {
 	width: 8.33%;
 }
+
 .col-3-12 {
 	width: 24.99%;
 }
@@ -353,10 +365,8 @@ nav a:hover {
 }
 
 .col-10-12 {
-	width: 100%;
+	width: 83.3%;
 }
-
-/*----------3.2	- Site Header----------*/
 
 /*----------3.3	- Site Footer----------*/
 
@@ -369,7 +379,6 @@ footer ul {
 }
 
 footer ul a, footer ul li{
-	display: inline-block;
 	margin-right: 10px;
 }
 
@@ -401,7 +410,7 @@ footer ul li a:hover{
 /*----------4.1 - Image Slider----------*/
 
 /* Prevents slides from flashing */
-#slides {
+#slides, .slidesjs-previous, .slidesjs-next {
   display:none;
 }
 
@@ -410,17 +419,16 @@ footer ul li a:hover{
     list-style: none;
 }
 
-.slidesjs-pagination li {
-  display: inline-block;
-}
-
 .slidesjs-pagination li a {
-    display: block;
     width: 10px;
     height: 0;
     padding-top: 10px;
     overflow: hidden;
     border: solid 1px grey;
+	-webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
     border-radius: 10px;
     margin-right: 5px;
 }
@@ -429,40 +437,26 @@ footer ul li a:hover{
   background: grey;
 }
 
-.slidesjs-previous, 
-.slidesjs-next {
-  display: none;
-}
-
-
 /*----------4.2 - Other Background----------*/
 
-#package-5day, #package-2day, #package-halfday, #package-3day, #package-4day {
-	-webkit-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-	background-size: cover;
-}
-
 #package-5day {
-	background: url(../img/img-package-5day.png) no-repeat;
+	background: url(../img/img-package-5day.jpg) no-repeat;
 }
 #package-halfday {
-	background: url(../img/img-package-halfday.png) no-repeat;
+	background: url(../img/img-package-halfday.jpg) no-repeat;
 }
 #package-2day {
-	background: url(../img/img-package-2day.png)no-repeat;
+	background: url(../img/img-package-2day.jpg)no-repeat;
 }
 #package-3day {
-	background: url(../img/img-package-3day.png) no-repeat;
+	background: url(../img/img-package-3day.jpg) no-repeat;
 }
 #package-4day {
-	background: url(../img/img-package-4day.png) no-repeat;
+	background: url(../img/img-package-4day.jpg) no-repeat;
 }
 
 #bg-instructors {
-	 background: url(../img/img-slider-3.jpg) no-repeat top right;
+	background: url(../img/img-slider-3.jpg) no-repeat top right;
 }
 
 #bg-about {
@@ -473,18 +467,17 @@ footer ul li a:hover{
 	background: url(../img/img-slider-5.jpg) no-repeat top right;
 }
 
-#bg-about, #bg-instructors, #bg-services {
+#bg-about, #bg-instructors, #bg-services, #package-5day, #package-2day, #package-halfday, #package-3day, #package-4day {
 	-webkit-background-size: contain;
     -ms-background-size: contain;
     -o-background-size: contain;
     -moz-background-size: contain;
 	background-size: contain;
-	margin: 20px 0;
-	padding: 20px 0;
 }
 
-#packages li {
-	list-style-image: url(../img/wave.png);
+#bg-about, #bg-instructors, #bg-services {
+	margin: 20px 0;
+	padding: 20px 0;
 }
 
 
@@ -516,11 +509,10 @@ footer ul li a:hover{
 	color: #ebf0f6;
 }
 
-hr {
+.blue-rule {
+	width: 100%;
 	height: 2px;
-	color: #43ace1;
 	background-color: #43ace1;
-	border: none;
 }
 
 /*----------5.3 - Alignments----------*/
@@ -541,6 +533,22 @@ hr {
 
 .push-right {
 	float: right;
+}
+
+.sec-btn {
+	padding: 250px 43px 0 0;
+}
+
+.sec-btn, .third-btn {
+	text-align: center;
+}
+
+.third-btn {
+	padding-top: 10px;
+}
+
+#packages .blue-rule {
+	margin-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -572,16 +580,20 @@ hr {
 		padding: 0 10px;
 	}
 	
-	.pos-rel .row {
+	.pos-rel .row, .col-1-6 {
 		padding: 0;
 	}
 	
 	.bg-blue, .bg-grey {
-		padding: 10px 20px;
+		padding: 8px 30px;
 	}
 	
 	.col-1-2, .col-3-12, .col-5-6, .col-1-6, .col-10-12, .col-1-3, .col-2-3 {
 		width: 100%;
+	}
+	
+	.col-1-12 {
+		width: 0;
 	}
 	
 	.col-10-12 {
@@ -597,28 +609,25 @@ hr {
 		right:0;
 	}
 	
+	input {
+		width: 100%;
+	}
+	
+	/*Text*/
+	
+	#article {
+		font-size: 1.3rem;
+	}
+	
 	#lead-in {
 	font-size: 1.1rem;
 	padding-bottom: 0;
 	}	
 	
-	input {
-		width: 100%;
-	}
+	/*Alignments*/
+	
 	nav li {
 		padding: 0 10px;
-	}
-	
-	#bg-instructors .bg-grey, #bg-services .bg-grey {
-		background-color: rgba(97, 98, 98, .5);
-	}
-	#bg-about .bg-blue, .pos-abs .bg-blue {
-		background-color:  rgba(235, 240, 246, .5)
-	}
-	
-	#bg-services, #bg-about, #bg-instructors {
-		padding: 20px 10px;
-		background-size: cover;
 	}
 	
 	#bg-services, #bg-about {
@@ -630,7 +639,25 @@ hr {
 	}
 	
 	#packages .sec-btn {
-    padding:0
+    	padding:0
+	}
+	
+	/*Background*/
+	
+	#bg-services, #bg-about, #bg-instructors {
+	padding: 20px 10px;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	 -o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	}
+	
+	#bg-instructors .bg-grey, #bg-services .bg-grey {
+		background-color: rgba(97, 98, 98, .8);
+	}
+	#bg-about .bg-blue, .pos-abs .bg-blue {
+		background-color:  rgba(235, 240, 246, .8)
 	}
 	
 	#package-5day, #package-2day, #package-3day, #package-halfday, #package-4day {

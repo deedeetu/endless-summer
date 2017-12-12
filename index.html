@@ -6,29 +6,8 @@
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800,900|Saira+Extra+Condensed:400,500,600,700,800,900" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script src="jquery.slides.js"></script>
 <script src="js/responsiveslides.js"></script>
-<script>
-    $(function(){
-      $("#slides").slidesjs({
-        width: 940,
-        height: 528
-      });
-    });
- </script>
- <script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
-  function initialize() {
-	var mapCanvas = document.getElementById('map');
-	var mapOptions = {
-	  center: new google.maps.LatLng(-37.824787, 174.803721),
-	  zoom: 8,
-	  mapTypeId: google.maps.MapTypeId.ROADMAP
-	}
-	var map = new google.maps.Map(mapCanvas, mapOptions)
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+
 	
 <title>Endless Summer</title>
 </head>
@@ -36,7 +15,7 @@
 <body>
 	
 	<header>
-		<nav> 
+		<nav id="smooth-scroll"> 
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#about">About</a></li>
@@ -59,11 +38,12 @@
 			<div class="pos-abs">
 				<div class="wrapper row">
 					<section class="col-1-2 push-right bg-blue">
-							<h2>5 Days Deluxe Package</h2><hr>
+							<h2>5 Days Deluxe Package</h2>
+							<div class="blue-rule"></div>
 							<p>This course is suited for all ages and abilities and is one of our most popular packages as we can show you a wide range of techniques to make you a competent surfer!</p>
 							<ul class="prim-btn">
 							<li><a href="#5-days">More Info</a></li>
-							<li><a href="#">Book Now</a></li>
+							<li><a href="#packages">Book Now</a></li>
 							</ul>
 					</section>
 				</div>
@@ -71,12 +51,13 @@
     	</div>
 	</header>	
 	
-	<div class="wrapper">
+	<section class="wrapper">
 		<div class="row" id="bg-instructors">
-			<section class="col-1-2 bg-grey txt-white">
+			<div class="col-1-2 bg-grey txt-white">
 				<header>
-					<h2>Instructors</h2><hr>
+					<h2>Instructors</h2>
 				</header>
+				<div class="blue-rule"></div>
 				<ul>
 					<li>Surfing New Zealand coaching accreditation</li>
 					<li>APOLA Beach lifeguard certification</li>
@@ -85,15 +66,16 @@
 					<li>All instructors have vast knowledge of the local area</li>
 					<li>Teach surf in waist deep water conditions </li>
 				</ul>
-			</section>			
+			</div>			
 		</div>
-	</div>
-	<div class="bg-blue">
-		<section class="wrapper" id="packages">
+	</section>
+	<section class="bg-blue">
+		<div class="wrapper" id="packages">
 			<header class="txt-center">
-				<h2>Packages</h2><hr>
+				<h2>Packages</h2>
 				<p id="lead-in">You will also receive Half price dinner voucher and complimentary drink at local restaurant for each lesson.</p>
 			</header>
+			<div class="blue-rule"></div>
 			
 			<section class="row">
 				<div class="col-2-3 push-right">
@@ -196,15 +178,16 @@
 					<p><a href="#">Book Now</a></p>
 				</div>
 			</section>
-		</section>
-	</div>
+		</div>
+	</section>
 	
-	<div class="wrapper">
+	<section class="wrapper">
 		<div class="row" id="bg-about">
 			<section class="col-1-2 push-right bg-blue">
 				<header>
-					<h2 id="about">About</h2><hr>
+					<h2 id="about">About</h2>
 				</header>
+				<div class="blue-rule"></div>
 				<p>Endless Summer’s mission is to cultivate a love and respect for the ocean by building confidence, developing character and inspiring stoke through safety, fun and learning.</p>
 
 				<p>Come on a learn to surf journey of a lifetime in Manu Bay as we set off on a half day adventure. Sit back and relax after we pick you up from your accommodation and begin the search.</p>
@@ -216,8 +199,9 @@
 		<div class="row" id="bg-services">
 			<section class="col-1-2 txt-white bg-grey">
 				<header>
-					<h2>Our Services</h2><hr>
+					<h2>Our Services</h2>
 				</header>
+				<div class="blue-rule"></div>
 				<ul>
 					<li>10 different location</li>
 					<li>Our Beaches are the best in New Zealand</li>
@@ -230,38 +214,39 @@
 				</ul>
 			</section>
 		</div>
-	</div>
+	</section>
 	
-	<div class="bg-grey txt-white">
+	<section class="bg-grey txt-white">
 		<div class="wrapper txt-center" id="article">
 			<p>Get ready for your surf adventure! <a href="http://www.theinertia.com/surf/8-awesome-ways-to-prepare-for-a-surf-trip/" target="_blank">Read it!</a></p>
 		</div>
-	</div>
+	</section>
 	
-	<div class="bg-blue" id="contact">
-		<section class="wrapper row">
+	<section class="bg-blue" id="contact">
+		<div class="wrapper row">
 			<header>
-				<h2 class="txt-center">Contact Us</h2><hr>
+				<h2 class="txt-center">Contact Us</h2>
 			</header>
+			<div class="blue-rule"></div>
 			<form>
 				<div class="col-1-2">
 					<div>
 						<label>Name</label>
-						<input  name="name" type="text" value="" placeholder="Name"/>
+						<input  name="name" type="text" value=""/>
 					</div>
 					<div>
 						<label>Email</label>
-						<input name="email" type="text" placeholder="Email" />
+						<input name="email" type="text"/>
 					</div>
 					<div>
 						<label>Subject</label>
-						<input name="subject" type="text" placeholder="Subject" />
+						<input name="subject" type="text"/>
 					</div>
 				</div>
 				<div class="col-1-2">
 					<label for="message">Message</label>
-					<textarea id="message" name="message" rows="7" placeholder="Message"></textarea>
-					<p class="sec-btn"><a href="#">Submit</a></p>
+					<textarea id="message" name="message" rows="7"></textarea>
+					<p class="third-btn"><a href="#">Submit</a></p>
 				</div>
 			</form>
 
@@ -282,25 +267,75 @@
 				</section>
 			</div>
 			
-			<form>
+			<form class="row">
+				<div class="col-1-12"></div>
 				<div class=" col-10-12">
 					<label>Email Subscription</label>
 					<input name="email" type="text" placeholder="Email" />
-					<p class="sec-btn"><a href="#">Submit</a></p>
+					<p class="third-btn"><a href="#">Submit</a></p>
 				</div>
+				<div class="col-1-12"></div>
 			</form>
-		</section>
-	</div>
+		</div>
+	</section>
 	
 	<footer class="wrapper row">
 		<h5 class="col-1-2"><a href="#"><img src="img/logo-endlesssummer.png" height="50" alt="Endless Summer"></a></h5>
 		<div class="col-1-2">
 			<ul>
-				<li><a href="https://www.facebook.com/DeeDeeTu" target="_blank"></a>  <span>Facebook</span></li>
-				<li><a href="https://www.instagram.com/deedee_tu/" target="_blank"></a>  <span>Instagram</span> </li>
+				<li><a href="https://www.facebook.com/" target="_blank"></a>  <span>Facebook</span></li>
+				<li><a href="https://www.instagram.com/" target="_blank"></a>  <span>Instagram</span> </li>
 			</ul>
 		</div>
 	</footer>
+	
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	jQuery(document).ready(function($){
+
+		// Smooth scroll home nav
+			$('#smooth-scroll').on('click', 'a', function(e) {
+				// prevent default anchor click behavior
+				e.preventDefault();
+
+			   // store hash
+			   var hash = this.hash;
+
+				$('html, body').animate({
+				   scrollTop: $(this.hash).offset().top-0
+				 }, 500, function(){
+
+				   // when done, add hash to url
+				   // (default click behaviour)
+				   window.location.hash = hash;
+				 });
+
+			});
+
+
+	});
+
+    $(function(){
+      $("#slides").slidesjs({
+        width: 940,
+        height: 528
+      });
+    });
+		
+		
+		
+	  function initialize() {
+	var mapCanvas = document.getElementById('map');
+	var mapOptions = {
+	  center: new google.maps.LatLng(-37.824787, 174.803721),
+	  zoom: 8,
+	  mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(mapCanvas, mapOptions)
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);	
+ </script>
+
 	
 </body>
 </html>
