@@ -119,6 +119,10 @@ footer ul a, footer ul li, nav li, .slidesjs-pagination li, .prim-btn li {
 	padding: 10px 50px;
 }
 
+.third-btn:last-child {
+	margin-bottom: 40px;
+}
+
 .sec-btn a:hover, #article a:hover, .third-btn a:hover {
 	border: 1.5px solid #43ace1;
 	background-color: #ebf0f6;
@@ -480,7 +484,6 @@ footer ul li a:hover{
 	padding: 20px 0;
 }
 
-
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
@@ -576,16 +579,16 @@ footer ul li a:hover{
 		width: 100%;
 	}
 	
-	.row {
-		padding: 0 10px;
-	}
-	
 	.pos-rel .row, .col-1-6 {
 		padding: 0;
 	}
 	
 	.bg-blue, .bg-grey {
 		padding: 8px 30px;
+	}
+	
+	#bg-services .col-1-2, #bg-about .col-1-2, #bg-instructors .col-1-2 {
+		width: 80%;
 	}
 	
 	.col-1-2, .col-3-12, .col-5-6, .col-1-6, .col-10-12, .col-1-3, .col-2-3 {
@@ -602,6 +605,7 @@ footer ul li a:hover{
 	
 	.col-s-1-2, footer .col-1-2 {
 		width: 50%;
+		padding-left: 10px;
 	}
 	
 	.pos-abs {
@@ -615,8 +619,13 @@ footer ul li a:hover{
 	
 	/*Text*/
 	
+	html {
+		font-size: 13px;
+	}
+	
 	#article {
 		font-size: 1.3rem;
+		padding: 10px 0;
 	}
 	
 	#lead-in {
@@ -645,7 +654,7 @@ footer ul li a:hover{
 	/*Background*/
 	
 	#bg-services, #bg-about, #bg-instructors {
-	padding: 20px 10px;
+	padding: 20px 0px;
 	-webkit-background-size: cover;
 	-ms-background-size: cover;
 	 -o-background-size: cover;
